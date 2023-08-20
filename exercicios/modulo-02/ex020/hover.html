@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*
+        > significa algo que é filho --> nesse caso o parágrafo seria filho de div
+        esse código estará se referindo ao parágrafo que está dentro da div
+        */
+
+        div > p {
+            display: none; /*deixa o parágrafo oculto*/ 
+        }
+
+        /*
+        Esse trecho configura o parágrafo que está dentro da div
+        - :houver é para que quando eu passe o mouse em cima haja uma interação 
+        */
+        div:hover > p {
+            display: block; /*essa parte serve para mostrar o texto escondido*/
+            color: white; /*configura a cor da letra*/
+            background-color: red; /*configura a cor de fundo*/
+            width: 300px; /*configura a largura da cor de fundo*/
+        }
+        div:hover {
+            color: red;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Exemplo de Hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>
+        Passe o  mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+    </div>
+    <p>Fim do Exemplo</p>
+</body>
+</html>

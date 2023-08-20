@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de Texto</title>
+    <style>
+        mark {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Principais formatações</h1>
+    <h2>Negrito</h2>
+    <p>Nessa frase temos um <b>termo em negrito</b> usando a tag B (não semântica)</p> <!--b é uma tag não semântica. Mas pq? Isso pois essa tag não tem significado, ela só tem forma, ou seja ela só tem formato em negrito e isso não quer dizer muita coisa, somente que eu quis colocar em negrito-->
+    <p>Nesta frase temos um <strong>termo em destaque</strong> usando a tag strong (semântica)</p> <!-- o strong além da forma negrito que ele proporciona, ele da um sentido, ou seja, eu coloquei em negrito pois esse texto é mais forte, é de destaque-->    
+    <h2>Itálico / Ênfase</h2>
+    <p>Nesta frase, temos um <i>termo em itálico</i> usando a tag I (não semântica)</p>
+    <p>Nesta frase, temos um <em>termo em enfâse</em> usando EM (semântica)</p> <!--em vem de enfâse em inglês-->
+    <h2>Texto marcado</h2> <!--Estilo marcador de texto-->
+    <p>Podemos criar também um <mark>texto marcado</mark> usando a tag MARK.</p><!--*vale pontuar que é pouco usual *para mudar a cor teria que fazer a utilização do css, pois cor não é significado mas sim forma, então mark signifi ca que eu quero ele marcado, porém a cor é css-->
+    <p>Estamos criando um <big>texto grande</big> e um <small>texto pequeno</small></p> <!--big aparece em vermelho pois já está obsoleto, porém small não-->
+    <h2>Texto deletado</h2>
+    <p>Podemos marcar <del>um texto como excluido</del> para indicar que ele deve ser lido, mas não considerado</p>
+    <h2>Texto inserido</h2>
+    <p>Podemos marcar <ins>um texto como inserido</ins> para dar uma ênfase e indicar que ele foi adicionado depois</p>
+    <h2>Texto sobrescrito</h2>
+    <p>Para inserir coisas do tipo x^20+3 // x<sup>20</sup>+3 para fazer o 20 ficar elevado eu vou selecionar e colocar a tag sup</p>
+    <h2>Texto subscrito</h2>
+    <p>Para inserir coisas do tipo H<sub>2</sub>0</p> <!--o 2 fica em baixo-->
+</body>
+</html>

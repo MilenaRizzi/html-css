@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --cor0: #ebe5c5;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive; 
+    --fonte-android: 'Android', cursive; 
+}
+/*Retira todos os espaços entre os blocos de todos os elementos */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+/*todo link que for da classe externo, depois dele (::after) eu irei colocar: */
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px; /*para deixar uma altura min, a parte delimitada pelo head estava curta e isso foi feito para aumentar - dessa forma eu vou ter sempre um tamanho de bloco padrão*/
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1 {
+    font-family: var(--fonte-destaque);
+    color: white;
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px; /*para dar um espaço entre o título e o p*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267); /*sombra em texto*/
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px; /*largura máxima vai ser 600 - isso é para deixar a largura maxima dele fixa, ou seja, o texto ao invés de ficar cumprido, vai dar uma quebradinha - qnd fizer isso o texto vai deixar de ficar centralizado então eu preciso colocar o magin auto*/
+    margin: auto;
+    margin-bottom: 30px; /*para dar um espaço entre o p do header e o menu */
+   
+    /*paddings para que o texto não fique tão colado nas leterais quando a tela do navegador for diminuindo*/
+    padding-right: 10px;
+    padding-left: 10px;
+    
+    /*Para colocar sombra no texto*/
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+
+nav {
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.267);
+}
+
+nav>a {
+    color: var(--cor1);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    /*configuração para quando eu passar o mouse por cima o négocio levar 0.5seg de transição*/
+    transition-duration: 0.5s;
+}
+
+nav > a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+    text-decoration: underline;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+main {
+    min-width: 300px;
+    max-width: 1025px;
+    margin: auto;
+    margin-bottom: 30px /*para deixar a margem inferior separada do aside*/;
+    /*duas border abaixo para fazer a borda apenas na parte de baixo*/
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418); /*0px 0px é para não ter deslocamento nem lateral nem vertical  */
+}
+
+/*todo h1 dentro de main*/
+main h1 {
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor5);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    text-indent: 8px; /*usou indent para dar um espaçamento do lado esquerdo, poderia ter usado padding.*/
+}
+
+/*todo p dentro de main*/
+main p {
+    margin: 15px 0px; /*para dar um espaçamento entre as coisas que estavam grudadas*/
+    text-align: justify;
+    text-indent: 30px; /*para dar o parágrafo*/
+    font-size: 1em;
+    line-height: 2em; /*espaçamento entre linhas*/
+}
+
+/*todo strong dentro de main*/
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+    padding: 2px, 6px; /*em cima vai ter um espaçamento de 2px e na lateral 8px*/
+}
+
+/*todo link dentro de main*/
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: var(--cor4); /*para quando eu passar o mouse a cor da letra mudar suavimente*/
+}
+
+main img {
+/* As imagens dentro de main ocuparão 100% da largura da janela do navegador */
+    width: 100%;
+}
+
+main img.pequena {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+div.video {
+    background-color: var(--cor5);
+    /*para a parte da div, a parte verde cole nas laterais vou usar valor negativo. O -30 é para o margin de baixo aumentar um pouquinho*/
+   
+
+    /*artifícios para deixar o vídeo centralizado e preenchido na div*/
+    padding-bottom: 58%; /*qnd o position relative é adicionado a estrtura da div bug e fica muito pequena, para resolver isso é colocado o padding de 59% para que a parte de baixo aumente*/
+    position: relative;
+}
+
+/*artifícios para deixar o vídeo centralizado e preenchido na div*/
+div.video > iframe {
+    position: absolute;
+    /*quando se coloca o position absolute eu consigo mexer com top e left que é a superior e lateral esquerda*/
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+}
+
+aside > ul {
+    list-style-position: inside; /*o comum é outside, ou seja, coloca fora do bloco aside, quando coloco inside a bolinha da lista vai para dentro do bloco*/
+    columns: 2; /*para dividir em duas colunas*/
+    /*trocar a bolinha do ul por um check.*/
+    list-style-type: '\2714\00A0\00A0'; /*00A0 é o NPSP - que é o espaço sem quebra - qnd eu coloco dois desses me aparecem dois espaços 
+    - essa configuração não é compatível com todo navegador*/
+}
+
+aside > h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0px -10px; /*eu quero que o bloco onde está o h3 cresça para fora e não para dentro do bloco aside, para isso eu coloco a margem como negativa, nesse caso usamos o -10 para cada lado, menos para baixo*/
+    border-radius: 10px 10px 0px 0px; /*para a parte de cima do bloco do h3 ficar arredondada igual a parte de baixo do bloco aside*/
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.58em;
+    padding: 5px; /*usei margin e border*/
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
