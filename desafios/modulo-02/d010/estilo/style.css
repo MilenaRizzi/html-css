@@ -57,7 +57,7 @@ header > p {
     color: white;
     max-width: 600px; /*largura máxima vai ser 600 - isso é para deixar a largura maxima dele fixa, ou seja, o texto ao invés de ficar cumprido, vai dar uma quebradinha - qnd fizer isso o texto vai deixar de ficar centralizado então eu preciso colocar o magin auto*/
     margin: auto;
-    margin-bottom: 30px; /*para dar um espaço entre o p do header e o menu */
+    padding-bottom: 30px; /*para dar um espaço entre o p do header e o menu */
    
     /*paddings para que o texto não fique tão colado nas leterais quando a tela do navegador for diminuindo*/
     padding-right: 10px;
@@ -71,6 +71,7 @@ nav {
     background-color: var(--cor5);
     padding: 10px;
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.267);
+    
 }
 
 nav>a {
